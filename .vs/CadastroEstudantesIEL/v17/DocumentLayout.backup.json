@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE77C6D-141F-4008-81CB-C4F36FA61F30}|CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj|c:\\users\\danilo\\desktop\\cadastroestudantesiel\\cadastroestudantesiel\\models\\estudante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEE77C6D-141F-4008-81CB-C4F36FA61F30}|CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj|solutionrelative:cadastroestudantesiel\\models\\estudante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE77C6D-141F-4008-81CB-C4F36FA61F30}|CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj|c:\\users\\danilo\\desktop\\cadastroestudantesiel\\cadastroestudantesiel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEE77C6D-141F-4008-81CB-C4F36FA61F30}|CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj|solutionrelative:cadastroestudantesiel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE77C6D-141F-4008-81CB-C4F36FA61F30}|CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj|c:\\users\\danilo\\desktop\\cadastroestudantesiel\\cadastroestudantesiel\\cadastroestudantesiel.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DEE77C6D-141F-4008-81CB-C4F36FA61F30}|CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj|solutionrelative:cadastroestudantesiel\\cadastroestudantesiel.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CadastroEstudantesIEL.csproj",
+              "DocumentMoniker": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj",
+              "RelativeDocumentMoniker": "CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj",
+              "ToolTip": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj",
+              "RelativeToolTip": "CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-12T21:29:24.908Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\CadastroEstudantesIEL\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "CadastroEstudantesIEL\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\CadastroEstudantesIEL\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "CadastroEstudantesIEL\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-12T21:31:48.549Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Estudante.cs",
+              "DocumentMoniker": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\CadastroEstudantesIEL\\Models\\Estudante.cs",
+              "RelativeDocumentMoniker": "CadastroEstudantesIEL\\Models\\Estudante.cs",
+              "ToolTip": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\CadastroEstudantesIEL\\Models\\Estudante.cs",
+              "RelativeToolTip": "CadastroEstudantesIEL\\Models\\Estudante.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T22:26:10.706Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
