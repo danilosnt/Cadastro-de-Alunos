@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DEE77C6D-141F-4008-81CB-C4F36FA61F30}|CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj|c:\\users\\danilo\\desktop\\cadastroestudantesiel\\cadastroestudantesiel\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{DEE77C6D-141F-4008-81CB-C4F36FA61F30}|CadastroEstudantesIEL\\CadastroEstudantesIEL.csproj|solutionrelative:cadastroestudantesiel\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\CadastroEstudantesIEL\\.gitignore",
+              "RelativeDocumentMoniker": "CadastroEstudantesIEL\\.gitignore",
+              "ToolTip": "C:\\Users\\Danilo\\Desktop\\CadastroEstudantesIEL\\CadastroEstudantesIEL\\.gitignore",
+              "RelativeToolTip": "CadastroEstudantesIEL\\.gitignore",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAIYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-12T20:59:52.875Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

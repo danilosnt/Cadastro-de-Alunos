@@ -1,0 +1,135 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+# Visual Studio 2017 cache/options directory
+.vsconfig
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-agent*.log
+nunit-internal*.log
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# Benchmark Results
+BenchmarkDotNet.Artifacts/
+
+# Dotnet Watcher
+.dotnettls/
+
+# FxCop
+*.CodeAnalysisLog.xml
+
+# Interop
+**/interop/
+
+# Roslyn files
+.roslyn/
+
+# JustCode
+.justcode/
+
+# RemSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# Team City
+_TeamCity*
+
+# DotCover
+*.dotCover
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# VSIX
+*.vsix
+*.vsixmanifest
+
+# Docker
+docker-compose.yml.override
+.dockerignore
+
+# Tye
+.tye/
+
+# MIEngine debugging memory dump
+*.mscordbi.dll
+*.mscordaccore.dll
+
+# Kestrel
+*.pfx
+*.cer
+
+# Secrets
+secrets.json
+appsettings.Development.json
+
+# StyleCop
+StyleCopReport.xml
+
+# Nuget Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Roslyn Analyzers
+!**/[Pp]ackages/analyzers/
+# Include package target files which are required for building the solution.
+!**/[Pp]ackages/build/*.targets
+!**/[Pp]ackages/build/*.props
+# Legacy package restore
+.nuget/packages/*
+!/packages.config
+
+# Cache files
+*.cache
+
+# Folders for publishing
+publish/
+**/publish/
+
+# IDE settings
+*.sln.DotSettings.user
+
+# Some VS Code files
+.vscode
