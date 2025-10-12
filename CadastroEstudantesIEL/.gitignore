@@ -5,8 +5,8 @@
 *.userosscache
 *.sln.docstates
 
-# User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
+# User-specific files (Mono Auto Generated)
+mono_crash.*
 
 # Build results
 [Dd]ebug/
@@ -21,115 +21,32 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-[Ll]ogs/
 
-# Visual Studio 2015 cache/options directory
+# Visual Studio cache directories
 .vs/
-# Visual Studio 2017 cache/options directory
-.vsconfig
 
-# MSTest test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
+# Others
+*.vspscc
+*.vssscc
+*.dbmdl
+*.bak
+*.snl
+*.cache
+*.log
+*.pidb
+*.svclog
+*.scc
 
-# NUnit
-*.VisualState.xml
-TestResult.xml
-nunit-agent*.log
-nunit-internal*.log
+# Backup & test
+*.bak
+*.tmp
+*.temp
+*.testsettings
+TestResults/
 
-# Build Results of an ATL Project
-[Dd]ebugPS/
-[Rr]eleasePS/
-dlldata.c
-
-# Benchmark Results
-BenchmarkDotNet.Artifacts/
-
-# Dotnet Watcher
-.dotnettls/
-
-# FxCop
-*.CodeAnalysisLog.xml
-
-# Interop
-**/interop/
-
-# Roslyn files
-.roslyn/
-
-# JustCode
-.justcode/
-
-# RemSharper
-_ReSharper*/
-*.[Rr]e[Ss]harper
+# Rider / ReSharper
+.idea/
 *.DotSettings.user
 
-# Rider
-.idea/
-
-# Team City
-_TeamCity*
-
-# DotCover
-*.dotCover
-
-# NCrunch
-_NCrunch_*
-.*crunch*.local.xml
-nCrunchTemp_*
-
-# VSIX
-*.vsix
-*.vsixmanifest
-
-# Docker
-docker-compose.yml.override
-.dockerignore
-
-# Tye
-.tye/
-
-# MIEngine debugging memory dump
-*.mscordbi.dll
-*.mscordaccore.dll
-
-# Kestrel
-*.pfx
-*.cer
-
-# Secrets
-secrets.json
-appsettings.Development.json
-
-# StyleCop
-StyleCopReport.xml
-
-# Nuget Packages
-*.nupkg
-# The packages folder can be ignored because of Package Restore
-**/[Pp]ackages/*
-# except build/, which is used as an MSBuild target.
-!**/[Pp]ackages/build/
-# Roslyn Analyzers
-!**/[Pp]ackages/analyzers/
-# Include package target files which are required for building the solution.
-!**/[Pp]ackages/build/*.targets
-!**/[Pp]ackages/build/*.props
-# Legacy package restore
-.nuget/packages/*
-!/packages.config
-
-# Cache files
-*.cache
-
-# Folders for publishing
-publish/
-**/publish/
-
-# IDE settings
-*.sln.DotSettings.user
-
-# Some VS Code files
-.vscode
+# Others
+node_modules/
