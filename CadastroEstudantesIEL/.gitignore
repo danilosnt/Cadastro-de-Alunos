@@ -1,52 +1,16 @@
-# User-specific files
-*.rsuser
+# Pasta do Visual Studio
+.vs/
+
+# Pastas de compilação
+[Bb]in/
+[Oo]bj/
+
+# Arquivos de usuário
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
-# User-specific files (Mono Auto Generated)
-mono_crash.*
-
-# Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-
-# Visual Studio cache directories
-.vs/
-
-# Others
-*.vspscc
-*.vssscc
-*.dbmdl
-*.bak
-*.snl
-*.cache
-*.log
-*.pidb
-*.svclog
-*.scc
-
-# Backup & test
-*.bak
-*.tmp
-*.temp
-*.testsettings
-TestResults/
-
-# Rider / ReSharper
-.idea/
-*.DotSettings.user
-
-# Others
-node_modules/
+# Outros
+*.DS_Store
+*.swp
