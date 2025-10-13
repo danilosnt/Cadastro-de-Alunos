@@ -1,18 +1,20 @@
 ﻿@model IEnumerable<CadastroEstudantesIEL.Models.Estudante>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista de Estudantes";
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Novo Estudante</a>
 </p>
-<table class="table">
+
+<table class="table table-striped table-hover">
     <thead>
         <tr>
             <th>
+                @* Graças ao [Display(Name="...")] no Model, este texto já vem correto *@
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
@@ -24,30 +26,33 @@
             <th>
                 @Html.DisplayNameFor(model => model.DataConclusao)
             </th>
-            <th></th>
+            <th></th> @* Cabeçalho vazio para a coluna de ações *@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CPF)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Endereco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataConclusao)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CPF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Endereco)
+                </td>
+                <td>
+                    @* Formatando a data para o padrão brasileiro *@
+                    @item.DataConclusao.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @* Botões pequenos para as ações *@
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary btn-sm">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Excluir</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
