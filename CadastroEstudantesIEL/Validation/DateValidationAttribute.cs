@@ -1,8 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CadastroEstudantesIEL.Validation
 {
-    public class DateValidationAttribute
+    public class DateValidationAttribute : ValidationAttribute
     {
 
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
@@ -18,8 +18,8 @@ namespace CadastroEstudantesIEL.Validation
                 {
                     return new ValidationResult("Esta data deve ser a partir de 1900.");
                 }
-                return ValidationResult.Success;
             }
+                return ValidationResult.Success;
         }
     }
 }

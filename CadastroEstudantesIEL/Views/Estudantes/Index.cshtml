@@ -51,7 +51,7 @@
                     @* Botões pequenos para as ações *@
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary btn-sm">Editar</a> |
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" 
                        onclick="return confirm('Deseja prosseguir para a página de exclusão de @item.Nome?');">Excluir</a>
                 </td>
             </tr>

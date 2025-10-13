@@ -1,7 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using CadastroEstudantesIEL.Validation;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace CadastroEstudantesIEL.Models
 {
+        // Index para deixar o CPF como valor único
+        [Index(nameof(CPF), IsUnique = true)]
     public class Estudante
     {
         [Key]
@@ -24,6 +29,7 @@ namespace CadastroEstudantesIEL.Models
         [Required(ErrorMessage = "O campo Data de Conclusão é obrigatório.")]
         [DataType(DataType.Date)]
         [Display(Name = "Data de Conclusão")]
+        [DateValidationAttribute]
         public DateTime DataConclusao { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CadastroEstudantesIEL.Data;
 using CadastroEstudantesIEL.Models;
+using System.Linq.Expressions;
 
 namespace CadastroEstudantesIEL.Controllers
 {
@@ -70,14 +71,31 @@ namespace CadastroEstudantesIEL.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(estudante);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    _context.Add(estudante);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (DbUpdateException ex)
+                {
+                    // Verifica a exceção interna para o erro de chave única do SQL Server (números 2601 ou 2627)
+                    if (ex.InnerException is Microsoft.Data.SqlClient.SqlException sqlEx &&
+                       (sqlEx.Number == 2601 || sqlEx.Number == 2627))
+                    {
+                        ModelState.AddModelError("CPF", "Este CPF já está cadastrado em nosso sistema.");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Ocorreu um erro ao salvar os dados.");
+                    }
+                }
             }
             return View(estudante);
         }
 
         // GET: Estudantes/Edit/5
+        // Este método busca o estudante e MOSTRA a página de edição.
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -109,19 +127,21 @@ namespace CadastroEstudantesIEL.Controllers
                 {
                     _context.Update(estudante);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateException ex)
                 {
-                    if (!EstudanteExists(estudante.Id))
+                    // Verifica a exceção interna para o erro de chave única do SQL Server (números 2601 ou 2627)
+                    if (ex.InnerException is Microsoft.Data.SqlClient.SqlException sqlEx &&
+                       (sqlEx.Number == 2601 || sqlEx.Number == 2627))
                     {
-                        return NotFound();
+                        ModelState.AddModelError("CPF", "Este CPF já está cadastrado em nosso sistema.");
                     }
                     else
                     {
-                        throw;
+                        ModelState.AddModelError(string.Empty, "Ocorreu um erro ao salvar as alterações.");
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
             return View(estudante);
         }
