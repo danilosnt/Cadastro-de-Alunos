@@ -14,6 +14,7 @@ namespace CadastroEstudantesIEL.Models
 
         [Required(ErrorMessage = "O campo Nome é obrigatório.")]
         [StringLength(100, ErrorMessage = "O Nome deve ter no máximo 100 caracteres.")]
+        [RegularExpression(@"^[a-zA-ZáéíóúàâêôãõçÁÉÍÓÚÀÂÊÔÃÕÇ ]+$", ErrorMessage = "O nome deve conter apenas letras e espaços.")]
         [Display(Name = "Nome Completo")]
         public string Nome { get; set; } = string.Empty;
 
