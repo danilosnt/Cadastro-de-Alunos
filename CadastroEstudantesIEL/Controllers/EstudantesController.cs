@@ -19,10 +19,24 @@ namespace CadastroEstudantesIEL.Controllers
             _context = context;
         }
 
-        // GET: Estudantes
-        public async Task<IActionResult> Index()
+        // GET: Estudantes --- MÉTODO CORRIGIDO COM A LÓGICA DE BUSCA ---
+        public async Task<IActionResult> Index(string termoBusca)
         {
-            return View(await _context.Estudantes.ToListAsync());
+            // Começa criando uma consulta base para todos os estudantes
+            var estudantes = from e in _context.Estudantes
+                             select e;
+
+            // Se o termo de busca não for nulo ou vazio...
+            if (!String.IsNullOrEmpty(termoBusca))
+            {
+                // ...filtra a consulta, buscando em Nome, CPF ou Endereço
+                estudantes = estudantes.Where(s => s.Nome.Contains(termoBusca)
+                                                || s.CPF.Contains(termoBusca)
+                                                || s.Endereco.Contains(termoBusca));
+            }
+
+            // Executa a consulta (já filtrada ou não) e envia a lista para a View
+            return View(await estudantes.ToListAsync());
         }
 
         // GET: Estudantes/Details/5
@@ -50,8 +64,6 @@ namespace CadastroEstudantesIEL.Controllers
         }
 
         // POST: Estudantes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,CPF,Endereco,DataConclusao")] Estudante estudante)
@@ -82,8 +94,6 @@ namespace CadastroEstudantesIEL.Controllers
         }
 
         // POST: Estudantes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,CPF,Endereco,DataConclusao")] Estudante estudante)
