@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using CadastroEstudantesIEL.Validation;
 using Microsoft.EntityFrameworkCore;
+using CadastroEstudantesIEL.Validation;
 
 
 namespace CadastroEstudantesIEL.Models
@@ -20,6 +20,7 @@ namespace CadastroEstudantesIEL.Models
 
         [Required(ErrorMessage = "O campo CPF é obrigatório.")]
         [Display(Name = "CPF")]
+        [CpfValidation(ErrorMessage = "O CPF informado não é válido.")] // Atributo para validação do CPF
         public string CPF { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "O campo Endereço é obrigatório.")]
