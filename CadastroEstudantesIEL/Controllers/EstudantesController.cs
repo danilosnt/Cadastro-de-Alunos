@@ -23,21 +23,18 @@ namespace CadastroEstudantesIEL.Controllers
         // GET: Estudantes --- MÉTODO CORRIGIDO COM A LÓGICA DE BUSCA ---
         public async Task<IActionResult> Index(string termoBusca)
         {
-            // Começa criando uma consulta base para todos os estudantes
             var estudantes = from e in _context.Estudantes
                              select e;
 
-            // Se o termo de busca não for nulo ou vazio...
             if (!String.IsNullOrEmpty(termoBusca))
             {
-                // ...filtra a consulta, buscando em Nome, CPF ou Endereço
                 estudantes = estudantes.Where(s => s.Nome.Contains(termoBusca)
                                                 || s.CPF.Contains(termoBusca)
                                                 || s.Endereco.Contains(termoBusca));
             }
 
-            // Executa a consulta (já filtrada ou não) e envia a lista para a View
-            return View(await estudantes.ToListAsync());
+            // Retorna uma lista simples, ordenada por nome
+            return View(await estudantes.OrderBy(e => e.Nome).ToListAsync());
         }
 
         // GET: Estudantes/Details/5
