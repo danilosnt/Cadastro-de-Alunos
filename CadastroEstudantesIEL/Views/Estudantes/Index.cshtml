@@ -17,7 +17,6 @@
     <thead>
         <tr>
             <th>
-                @* Graças ao [Display(Name="...")] no Model, este texto já vem correto *@
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
@@ -29,7 +28,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.DataConclusao)
             </th>
-            <th></th> @* Cabeçalho vazio para a coluna de ações *@
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -47,10 +46,9 @@
                 </td>
                 <td>
                     @* Formatando a data para o padrão brasileiro *@
-                    @item.DataConclusao.ToString("dd/MM/yyyy")
+                    @item.DataConclusao.ToString("dd/MM/yyyy") 
                 </td>
                 <td>
-                    @* Botões pequenos para as ações *@
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary btn-sm">Editar</a> |
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detalhes</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm" 
