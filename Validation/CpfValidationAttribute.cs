@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CadastroEstudantesIEL.Validation
 {
@@ -9,7 +8,6 @@ namespace CadastroEstudantesIEL.Validation
         {
             if (value == null || string.IsNullOrEmpty(value.ToString()))
             {
-                // A validação de [Required] já cuida disso, mas é uma boa prática verificar.
                 return ValidationResult.Success;
             }
 
@@ -54,7 +52,6 @@ namespace CadastroEstudantesIEL.Validation
                 return new ValidationResult("O CPF informado não é válido.");
             }
 
-            // Se passou por todas as verificações, o CPF é válido!
             return ValidationResult.Success;
         }
     }

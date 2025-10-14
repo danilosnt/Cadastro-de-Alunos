@@ -20,7 +20,7 @@ namespace CadastroEstudantesIEL.Controllers
             _context = context;
         }
 
-        // GET: Estudantes --- MÉTODO CORRIGIDO COM A LÓGICA DE BUSCA ---
+        // GET: Estudantes
         public async Task<IActionResult> Index(string termoBusca)
         {
             var estudantes = from e in _context.Estudantes
@@ -33,7 +33,6 @@ namespace CadastroEstudantesIEL.Controllers
                                                 || s.Endereco.Contains(termoBusca));
             }
 
-            // Retorna uma lista simples, ordenada por nome
             return View(await estudantes.OrderBy(e => e.Nome).ToListAsync());
         }
 
@@ -72,7 +71,7 @@ namespace CadastroEstudantesIEL.Controllers
                 {
                     _context.Add(estudante);
                     await _context.SaveChangesAsync();
-                    TempData["SuccessMessage"] = "Estudante cadastrado com sucesso!"; // <<< ADICIONE ESTA LINHA
+                    TempData["SuccessMessage"] = "Estudante cadastrado com sucesso!";
                     return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateException ex)
@@ -93,7 +92,6 @@ namespace CadastroEstudantesIEL.Controllers
         }
 
         // GET: Estudantes/Edit/5
-        // Este método busca o estudante e MOSTRA a página de edição.
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -125,7 +123,7 @@ namespace CadastroEstudantesIEL.Controllers
                 {
                     _context.Update(estudante);
                     await _context.SaveChangesAsync();
-                    TempData["SuccessMessage"] = "Estudante atualizado com sucesso!"; // <<< ADICIONE ESTA LINHA
+                    TempData["SuccessMessage"] = "Estudante atualizado com sucesso!";
                     return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateException ex)
@@ -175,7 +173,7 @@ namespace CadastroEstudantesIEL.Controllers
             }
 
             await _context.SaveChangesAsync();
-            TempData["SuccessMessage"] = "Estudante excluído com sucesso!"; // <<< ADICIONE ESTA LINHA
+            TempData["SuccessMessage"] = "Estudante excluído com sucesso!";
             return RedirectToAction(nameof(Index));
         }
 
