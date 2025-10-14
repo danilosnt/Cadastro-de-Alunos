@@ -72,6 +72,7 @@ namespace CadastroEstudantesIEL.Controllers
                 {
                     _context.Add(estudante);
                     await _context.SaveChangesAsync();
+                    TempData["SuccessMessage"] = "Estudante cadastrado com sucesso!"; // <<< ADICIONE ESTA LINHA
                     return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateException ex)
@@ -124,6 +125,7 @@ namespace CadastroEstudantesIEL.Controllers
                 {
                     _context.Update(estudante);
                     await _context.SaveChangesAsync();
+                    TempData["SuccessMessage"] = "Estudante atualizado com sucesso!"; // <<< ADICIONE ESTA LINHA
                     return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateException ex)
@@ -173,6 +175,7 @@ namespace CadastroEstudantesIEL.Controllers
             }
 
             await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Estudante excluído com sucesso!"; // <<< ADICIONE ESTA LINHA
             return RedirectToAction(nameof(Index));
         }
 
