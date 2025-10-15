@@ -83,13 +83,20 @@ Contém os atributos de validação customizados para implementar regras de neg�
 * Visual Studio 2022 (com a carga de trabalho "ASP.NET e desenvolvimento web").
 
 **Passos:**
-1.  Clone o repositório:
+1.  Clone o repositório para a sua máquina:
     ```bash
     git clone [https://github.com/danilosnt/Cadastro-de-Alunos.git](https://github.com/danilosnt/Cadastro-de-Alunos.git)
     ```
-2.  Abra o arquivo `CadastroEstudantesIEL.sln` no Visual Studio.
-3.  No Package Manager Console, execute o comando para criar o banco de dados:
+2.  Abra o **Projeto** no Visual Studio:
+    * Inicie o Visual Studio e, na tela de início, selecione a opção **"Open a project or solution"**.
+    * Navegue até a pasta que você acabou de clonar.
+    * Selecione o arquivo de projeto **`CadastroEstudantesIEL.csproj`** e clique em "Open".
+
+3.  Crie o Banco de Dados Local:
+    * Com o projeto aberto, vá até o menu **Tools > NuGet Package Manager > Package Manager Console**.
+    * Na console que se abrir, execute o seguinte comando para que o Entity Framework crie o banco de dados:
     ```powershell
     Update-Database
     ```
-4.  Pressione **`F5`** para iniciar a aplicação.
+4.  Execute a Aplicação:
+    * Pressione **`F5`** ou clique no botão de "Play" (▶) para compilar e iniciar o projeto. O site será aberto no seu navegador padrão.
